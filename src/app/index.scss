@@ -1,8 +1,39 @@
-@import '../../bower_components/foundation-sites/scss/foundation';
-@include foundation-everything;
-
 // bower:scss
 // endbower
+
+.top-bar {
+  .top-bar-left {
+    .menu {
+      .burger {
+        @include show-for-only(small);
+
+        button {
+          @include hamburger;
+        }
+      }
+
+      li:not(.logo):not(.burger) {
+        @include show-for(medium);
+      }
+    }
+  }
+
+  .top-bar-right {
+    button {
+      margin-bottom: 0;
+    }
+
+    .button {
+      @extend .button.expanded;
+    }
+  }
+}
+
+.off-canvas-wrapper {
+  &, .off-canvas-wrapper-inner, .off-canvas {
+    min-height: 100vh;
+  }
+}
 
 // injector
 // endinjector

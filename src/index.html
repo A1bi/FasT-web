@@ -19,11 +19,63 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
-    <div ui-view></div>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+        <div class="top-bar">
+          <div class="row">
+            <div class="top-bar-left">
+              <ul class="menu">
+                <li class="burger">
+                  <button data-open="offCanvasLeft"></button>
+                </li>
+                <li class="menu-text logo">LOGO</li>
+                <li><a href="#">Termine</a></li>
+                <li><a href="#">Informationen</a></li>
+                <li><a href="#">Geschichte</a></li>
+                <li><a href="#">Gästebuch</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <button class="button dropdown float-right" data-toggle="members-login-form">
+                <span class="hide-for-small-only">Mitglieder-</span>Login
+              </button>
+              <div class="dropdown-pane bottom" id="members-login-form" data-dropdown data-auto-focus="true">
+                <form>
+                  <div class="row">
+                    <div class="small-12 columns">
+                      <input type="text" placeholder="E-Mail-Adresse">
+                    </div>
+                    <div class="small-12 columns">
+                      <input type="password" placeholder="Passwort">
+                    </div>
+                    <div class="small-12 columns">
+                      <input type="submit" value="Login" class="button">
+                      <button class="hollow button" href="#">Passwort vergessen?</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+          <ul class="vertical dropdown menu" data-dropdown-menu>
+            <li><a href="#">Termine</a></li>
+            <li><a href="#">Informationen</a></li>
+            <li><a href="#">Geschichte</a></li>
+            <li><a href="#">Gästebuch</a></li>
+          </ul>
+        </div>
+
+        <div class="off-canvas-content" data-off-canvas-content>
+          <div ui-view></div>
+        </div>
+
+      </div>
+    </div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
