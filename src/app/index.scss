@@ -1,6 +1,8 @@
 // bower:scss
 // endbower
 
+@import 'variables';
+
 .top-bar {
   .top-bar-left {
     .menu {
@@ -32,6 +34,27 @@
 .off-canvas-wrapper {
   &, .off-canvas-wrapper-inner, .off-canvas {
     min-height: 100vh;
+  }
+}
+
+footer {
+  border-top: $border-size-regular solid $light-gray;
+  font-size: 75%;
+
+  &, ul {
+    margin-top: $spacing-medium !important;
+  }
+
+  ul li {
+    padding:  0 0 $spacing-small 0 !important;
+
+    &.menu-text {
+      padding-bottom: rem-calc(15) !important;
+    }
+
+    a {
+      padding: 0 !important;
+    }
   }
 }
 
