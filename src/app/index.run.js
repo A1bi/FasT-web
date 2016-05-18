@@ -3,10 +3,11 @@
 
   angular
     .module('fastWeb')
-    .run(function ($log) {
+    .run(function ($log, $document) {
       $log.log('FasT-web running');
 
-      angular.element(document).foundation();
+      Foundation.Dropdown.defaults.closeOnClick = true;
+      $document.foundation();
     })
   ;
 

@@ -1,9 +1,31 @@
-@import '../../bower_components/foundation-sites/scss/foundation';
+$foundation-palette: (
+  primary: #ca0000,
+  secondary: #777,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+);
 
+$breakpoints: (
+  small: 0px,
+  medium: 768px,
+  large: 1024px
+);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700);
+$body-font-family: 'Titillium Web', sans-serif;
+$global-font-size: 110%;
+
+$offcanvas-size: 150px;
+$offcanvas-background: none;
+$offcanvas-exit-background: rgba(white, .4);
+$maincontent-shadow: none;
+
+$topbar-background: none;
 $topbar-unstack-breakpoint: small;
 $topbar-input-width: none;
 
-$maincontent-shadow: none;
+@import '../../bower_components/foundation-sites/scss/foundation';
 
 @include foundation-global-styles;
 @include foundation-grid;
