@@ -8,6 +8,10 @@
   "globals": {
     "angular": true,
     "module": true,
-    "inject": true
+    "inject": true,
+    "Foundation": true
+  },
+  "rules": {
+    "angular/controller-name": [2, "/[A-Z].*Ctrl$/"]
   }
 }

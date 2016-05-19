@@ -20,28 +20,32 @@
         }
       }
 
-      .logo img {
-        height: rem-calc(100);
+      .logo a {
+        padding: 0;
         margin-bottom: rem-calc(-30);
         margin-top: rem-calc(-20);
-      }
 
-      a {
-        color: black;
-        transition: color .2s;
-
-        &:hover {
-          color: $white;
+        img {
+          height: rem-calc(100);
         }
       }
 
-      li {
-        &:not(.logo):not(.burger) {
+      a {
+        color: $black;
+        transition: color .2s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      li:not(.logo) {
+        &:not(.burger) {
           @include show-for(medium);
         }
 
         &:not(:last-child) a {
-          border-right: 1px solid rgba($primary-color, .5);
+          border-right: 1px solid $primary-color;
         }
       }
     }

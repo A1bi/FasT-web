@@ -18,3 +18,9 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+@mixin in-state($state-name) {
+  [data-current-state='#{$state-name}'] {
+    @content;
+  }
+}

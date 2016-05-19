@@ -1,10 +1,11 @@
 <!doctype html>
-<html ng-app="fastWeb">
+<html ng-app="fastWeb" ng-controller="MainCtrl as main" data-current-state="{{ main.stateName }}">
   <head>
     <meta charset="utf-8">
     <title>FasT-web</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <base href="/">
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
     <!-- bower:css -->
@@ -31,11 +32,13 @@
                   <button data-open="offCanvasLeft"></button>
                 </li>
                 <li class="menu-text logo">
-                  <img src="/assets/images/logo.png" alt="">
+                  <a ui-sref="home" title="Startseite">
+                    <img src="/assets/images/logo.png" alt="">
+                  </a>
                 </li>
-                <li><a href="#">Termine</a></li>
+                <li><a ui-sref="theater.alteDame">Termine</a></li>
                 <li><a href="#">Informationen</a></li>
-                <li><a href="#">Geschichte</a></li>
+                <li><a href="#">Unsere Geschichte</a></li>
                 <li><a href="#">Gästebuch</a></li>
               </ul>
             </div>
@@ -59,28 +62,28 @@
 
         <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
           <ul class="vertical dropdown menu" data-dropdown-menu>
-            <li><a href="#">Termine</a></li>
+            <li><a ui-sref="theater.alteDame">Termine</a></li>
             <li><a href="#">Informationen</a></li>
-            <li><a href="#">Geschichte</a></li>
+            <li><a href="#">Unsere Geschichte</a></li>
             <li><a href="#">Gästebuch</a></li>
           </ul>
         </div>
 
         <div class="off-canvas-content" data-off-canvas-content>
-          <div ui-view></div>
+          <ui-view></ui-view>
 
           <footer>
             <div class="row">
               <ul class="menu vertical medium-4 columns">
                 <li class="menu-text">Sommernachtstheater 2016</li>
-                <li><a href="#">Der Besuch der alten Dame</a></li>
+                <li><a ui-sref="theater.alteDame">Der Besuch der alten Dame</a></li>
                 <li><a href="#">Tickets bestellen</a></li>
                 <li><a href="#">Tickets umbuchen / stornieren</a></li>
                 <li><a href="#">Informationen zur Aufführung</a></li>
               </ul>
               <ul class="menu vertical medium-4 columns">
                 <li class="menu-text">Über den Verein</li>
-                <li><a href="#">Geschichte</a></li>
+                <li><a href="#">Unsere Geschichte</a></li>
                 <li><a href="#">Gästebuch</a></li>
                 <li><a href="#">Mitgliederbereich</a></li>
                 <li><a href="#">Mitglied werden</a></li>
